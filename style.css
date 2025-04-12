@@ -1,0 +1,282 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    border: none;
+  }
+
+  html{
+    overflow-x: hidden;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #111;
+    color: #fff;
+    line-height: 1.6;
+  }
+
+
+  header {
+    background-color: #1a1a1a;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  
+  .navbar a {
+    color: #fff;
+    margin-left: 1rem;
+    text-decoration: none;
+  }
+
+  .menu-icon{
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    display: none;
+  }
+  
+  nav a:hover {
+    color: #00ffff;
+  }
+  
+  .wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .image{
+    position: relative;
+    overflow: hidden;
+  }
+  img{
+    display: block;
+    margin: auto;
+  }
+  .content{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background:rgba(0,0,0,0,0.6);
+    color: #00ffff;
+    display:flex ;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    transition: 0.6s;
+  }
+
+  .content h2{
+    font-size:xx-large;
+  }
+
+  .content p{
+    font-size:x-large;
+  }
+
+  .image:hover img{
+    opacity: 0.3;
+  }
+  
+.image:hover .content{
+  opacity: 2;
+}
+  
+  .about-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    gap: 40px;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 40px auto;
+
+  }
+
+  .about-image {
+    flex: 1;
+    min-width: 33px;
+    max-width: 200px;
+    border: 2px solid #00ffff;
+    border-radius: 10px;
+  }
+
+  .about-image img {
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  .about-text {
+    flex: 2;
+    min-width: 300px;
+    color: #fff;
+  }
+
+  .about-text h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+
+  .about-text p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #dfdada;
+  }
+
+  .experience {
+    margin-top: 20px;
+    font-weight: bold;
+  }
+
+  @media (max-width: 768px) {
+
+    .navbar{
+      display: none;
+      flex-direction: column;
+      background: linear-gradient(to top, #060606, #222020);
+      position: absolute;
+      top: 100%;
+      height: 100vh;
+      width: 100%;
+      text-align: center;
+  }
+
+  .menu-icon {
+    display: flex;
+}
+
+.navbar.active {
+    display: block;
+    right: 0;
+}
+.navbar a {
+    display: block;
+    margin-top: 3rem;
+    font-size: 2rem;
+}
+
+    .about-section {
+      flex-direction: column;
+      padding: 20px;
+    }
+
+    .about-text h2 {
+      font-size: 24px;
+    }
+
+    .about-text p {
+      font-size: 15px;
+    }
+  }
+   section {
+    padding: 60px 20px;
+    max-width: 1000px;
+    margin: auto;
+  } 
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.video-item {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 2px solid #00ffff;
+}
+
+.video-item iframe {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 16/9;
+}
+
+.video-item p {
+    padding: 1rem;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+  form {
+    margin-top: 1;
+    display: grid;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  input, textarea {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  button {
+    padding: 10px;
+    background: #00ffff;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+button:hover {
+  background: #00cccc;
+}
+
+.icon{
+  display:flex;
+  justify-content: space-between;
+
+}
+
+.contant-icon{
+  display: flex;
+  justify-content:center;
+  align-items: end;
+  color: #fff;
+}
+
+.contact-icon a{
+  font-size: 2rem;
+  color: #00ffff;
+  width: 25px;
+  height: 52px;
+  line-height: 50px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  margin: 0 10px;
+  transition: 0.3s ease-in-out;
+}
+
+.contact-icon a:hover {
+  transform: scale(1.1)translateY(-2px);
+  background-color: #00ffff;
+  color: white;
+  box-shadow: 0 0 25px #00ffff;
+  width: 52px;
+}
+  
+  footer {
+    text-align: center;
+    padding: 20px;
+    background: #1a1a1a;
+    margin-top: 40px;
+  }
+  
